@@ -1,11 +1,11 @@
 package fun;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 
 public class Histogram {
-    private final Map<Integer, Integer> dataPoints = new HashMap<>();
+    private final Map<Integer, Integer> dataPoints = new ConcurrentHashMap<>();
     private int minPoint = Integer.MAX_VALUE;
     private int maxPoint = Integer.MIN_VALUE;
     private int maxValue = Integer.MIN_VALUE;
